@@ -1,0 +1,136 @@
+{% load  static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include 'head.html' %}
+
+
+</head>
+<body style="background-color:#4d5869">
+<!-- Preloader Start -->
+    <div id="preloader-active" style="background-color:#4d5869">
+        <div class="preloader d-flex align-items-center justify-content-center" >
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="{% static 'App/assets/img/logo/logo.png'%}" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    <header style="background-color:#4d5869">
+        <!-- Header Start -->
+       <div class="header-area" style="background-color:#4d5869">
+           <div class="headder-top header-sticky" style="background-color:#4d5869">
+                <div class="container" style="background-color:#4d5869">
+                    <div class="row align-items-center">
+{#                        <div class="col-lg-3 col-md-2">#}
+{#                            <!-- Logo -->#}
+{#                            <div class="logo">#}
+{#                                <a href="#"><img src="{% static 'App/assets/img/logo/logo.png'%}" alt=""></a>#}
+{#                            </div>#}
+{#                        </div>#}
+                        <div class="col-lg-pull-12 col-md-12" >
+                            <div class="menu-content">
+                                <!-- Main-menu -->
+                                <div class="main-menu" >
+                                    <div align="center" >
+                                        <u style="font-size:70px;color: red;margin-left: 10px"><img src="{% static 'img/hr.png' %}" width="70"> User Guide/Operations</u>
+                                        <a href="{% url 'logout' %}" class="btn head-btn2" style="margin-left:160px">LogOut</a>
+                                    </div>
+                                    <nav style="margin-right:550px;width: 1200px;height: 120px;">
+                                        <ul id="navigation">
+{#                                            <li><a href="#">Home</a></li>#}
+                                            <li><a href="#"><h6 style="color: white;">Thoughts</h6></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'addthought' %}">Add Thoughts</a></li>
+                                                    <li><a href="{% url 'viewthought' %}">View Thoughts</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><h6 style="color: white">Events</h6></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'addEvent' %}">Add Events</a></li>
+                                                    <li><a href="{% url 'viewEvent' %}">View Events</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><h6 style="color: white;"><br>Technical <br>Skills</h6></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'addtech' %}">Add Technical Skills</a></li>
+                                                    <li><a href="{% url 'viewtech' %}">View Technical Skills</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><h6 style="color: white;">Work<br> Experience</h6></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'addworkexp' %}">Add Work Experience</a></li>
+                                                    <li><a href="{% url 'viewworkexp' %}">View Work Experience</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><h6 style="color: white;">Property</h6></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'addProperty' %}">Add Property</a></li>
+                                                    <li><a href="{% url 'viewProperty' %}">View Property</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><h6 style="color: white;">Share <br>Market</h6></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'addsharemarket' %}">Add Share Market</a></li>
+                                                    <li><a href="{% url 'viewsharemarket' %}">View Share Market</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><h6 style="color: white;">Reference</h6></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'addreference' %}">Add Reference</a></li>
+                                                    <li><a href="{% url 'viewreference' %}">View Reference</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><h6 style="color: white;">Matrimonial</h6></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'addmatrimonial' %}">Add Matrimonial</a></li>
+                                                    <li><a href="{% url 'viewmatrimonial' %}">View matrimonial</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><h6 style="color: white;">Celebrations</h6></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'addceleb' %}">Add celebrations</a></li>
+                                                    <li><a href="{% url 'viewceleb' %}">View celebrations</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="#"><h6 style="color: white;">Travel</h6></a>
+                                                <ul class="submenu">
+                                                    <li><a href="{% url 'addTravel' %}">Add Travel</a></li>
+                                                    <li><a href="{% url 'viewTravel' %}">View Travel</a></li>
+                                                    <li><a href="#">Help</a></li>
+                                                </ul>
+                                            </li>
+{#                                <!-- Header-btn -->#}
+                                <div class="header-btn d-none f-right d-lg-block" >
+{#                                    <a href="#" class="btn head-btn1">Register</a>#}
+
+                                </div>
+                                        </ul></nav></div></div>
+                        </div>
+                        <div style="width: 1250px;">
+                            {% include 'commom/successmessage.html' %}
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+        <!-- Header End -->
+    </header>
+</body>
+</html>

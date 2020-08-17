@@ -1,0 +1,84 @@
+{% load static %}
+{% include 'userhomepage.html' %}
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description">
+    <meta name="author">
+    <meta name="keywords">
+
+    <!-- Title Page-->
+    <title>Add Event</title>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="{% static 'userform/css/main.css' %}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-dark p-t-80 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Add Reference Information Of User </h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{% url 'savereference' %}">
+                        {% csrf_token %}
+{#                        <div class="form-row">#}
+{#                            <div class="name">Username</div>#}
+{#                            <div class="value">#}
+{#                                <input class="input--style-6" type="text" name="full_name">#}
+{#                            </div>#}
+{#                        </div>#}
+                        <div class="form-row">
+                            <div class="name">Username</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="username" placeholder="Username..">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Job Title</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="jobtitle" placeholder="Username..">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Description</div>
+                            <div class="value">
+                                <div class="value">
+                                    <input class="input--style-6" type="text" name="desciption" placeholder="Description of Reference">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Last Date</div>
+                            <div class="value">
+                                <input class="input--style-6" type="date" name="lastdate" placeholder="Username..">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Add reference</button>
+                </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'userform/vendor/jquery/jquery.min.js' %}"></script>
+
+
+    <!-- Main JS-->
+    <script src="{% static 'userform/js/global.js' %}"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+    <body>
+        {% include 'userhomepage.html' %}
+    <table style="background-color:#5a6778;color: white " border="1" align="center">
+  <thead>
+  <tr><th colspan="8" style="text-align: center"><h2 style="color: white">View Property Information</h2></th></tr>
+    <tr>
+      <th scope="col" width="200px">Username</th>
+      <th scope="col" width="200px">Propery Type</th>
+      <th scope="col" width="200px">Property Title</th>
+      <th scope="col" width="100px">Area In Size( in sq. Feet)</th>
+        <th scope="col" width="200px">Price</th>
+        <th scope="col" width="200px">address No</th>
+        <th scope="col" width="200px">Contact No</th>
+        <th scope="col" width="200px">Email ID</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% if reg %}
+  {% for x in reg %}
+      <tr>
+      <td>{{ x.Username }}</td>
+      <td>{{ x.PropertType }}</td>
+      <td>{{ x.Proprty_title }}</td>
+      <td>{{ x.Area_in_size }}</td>
+      <td>{{ x.price }}</td>
+      <td>{{ x.Address }}</td>
+      <td>{{ x.Contact_no }}</td>
+      <td>{{ x.EmailID }}</td>
+    </tr>
+
+  {% endfor %}
+      {% else %}
+      <th style="text-align: center" colspan="5">NO Record Available</th>
+  {% endif %}
+
+  </tbody>
+</table>
+    </body>
+</html>

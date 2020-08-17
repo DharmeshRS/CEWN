@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+    <body>
+        {% include 'adminhomepage.html' %}
+    <table style="background-color:#5a6778;color: white " border="1">
+  <thead>
+    <tr>
+      <th scope="col" width="100px">EmployeeID</th>
+      <th scope="col" width="100px">Username</th>
+        <th scope="col" width="100px">Password</th>
+      <th scope="col" width="100px">Address</th>
+
+      <th scope="col" width="100px">EmailID</th>
+      <th scope="col" width="100px">Contact No</th>
+      <th scope="col" width="100px">DOB</th>
+      <th scope="col" width="80px">Company Name</th>
+      <th scope="col" width="70px">Status</th>
+      <th scope="col" width="80px">Usertype</th>
+      <th scope="col" width="50px">Accept</th>
+      <th scope="col" width="50px">Reject</th>
+
+    </tr>
+  </thead>
+  <tbody>
+  {% for x in reg %}
+      <tr>
+      <td>{{ x.EmployeeID }}</td>
+      <td>{{ x.Username }}</td>
+      <td>{{ x.Password }}</td>
+      <td>{{ x.Address }}</td>
+      <td>{{ x.EmailID }}</td>
+      <td>{{ x.ContactNo }}</td>
+      <td>{{ x.DOB }}</td>
+      <td>{{ x.Company_Name }}</td>
+      <td>{{ x.status }}</td>
+      <td>{{ x.usertype }}</td>
+          <td><a href="{% url 'acceptedusers' %}?x={{ x.EmployeeID }}" ><img src="{% static 'img/correct.png' %}" width="40px" style="background-color: white"></a></td>
+      <td><a href="{% url 'rejectedusers' %}?x={{ x.EmployeeID }}" ><img src="{% static 'img/wrong.jpg' %}" width="40px"></a></td>
+
+
+    </tr>
+
+  {% endfor %}
+
+  </tbody>
+</table>
+    </body>
+</html>

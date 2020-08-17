@@ -1,0 +1,36 @@
+{% load static %}
+<html>
+    <body>
+        {% include 'adminhomepage.html' %}
+    <table style="background-color:#5a6778;color: white " border="1" align="center">
+  <thead>
+  <tr><th colspan="3" style="text-align: center"><h2 style="color: white">View Travel Information</h2></th></tr>
+    <tr>
+      <th scope="col" width="200px">Username</th>
+      <th scope="col" width="200px">Location</th>
+
+      <th scope="col" width="300px">Description Of Thought</th>
+        <th scope="col" width="200px">Travel Date</th>
+        <th scope="col" width="200px">Contact No</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% if reg %}
+  {% for x in reg %}
+      <tr>
+      <td>{{ x.Username }}</td>
+      <td>{{ x.location }}</td>
+      <td>{{ x.Description }}</td>
+      <td>{{ x.Traveldate }}</td>
+      <td>{{ x.Contact_no }}</td>
+    </tr>
+
+  {% endfor %}
+      {% else %}
+      <th style="text-align: center" colspan="5">NO Record Available</th>
+  {% endif %}
+
+  </tbody>
+</table>
+    </body>
+</html>

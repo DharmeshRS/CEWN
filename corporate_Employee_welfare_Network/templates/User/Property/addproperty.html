@@ -1,0 +1,106 @@
+{% load static %}
+{% include 'userhomepage.html' %}
+<html>
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description">
+    <meta name="author">
+    <meta name="keywords">
+
+    <!-- Title Page-->
+    <title>Add Event</title>
+
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+
+    <!-- Main CSS-->
+    <link href="{% static 'userform/css/main.css' %}" rel="stylesheet" media="all">
+</head>
+
+<body>
+    <div class="page-wrapper bg-dark p-t-100 p-b-50">
+        <div class="wrapper wrapper--w900">
+            <div class="card card-6">
+                <div class="card-heading">
+                    <h2 class="title">Add Property Details </h2>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{% url 'saveProperty' %}">
+                        {% csrf_token %}
+                        <div class="form-row">
+                            <div class="name">Username</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="username" placeholder="Username..">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Property Type</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="propertyType" placeholder="sale/ToLet">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Property Title</div>
+                            <div class="value">
+                                <input class="input--style-6" type="text" name="propertytitle" placeholder="Ex.land/Plot/Flat">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Area In Size</div>
+                            <div class="value">
+                                <input class="input--style-6" type="number" name="area" placeholder="Ex.100( In sq.feet)">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Price</div>
+                            <div class="value">
+                                <input class="input--style-6" type="float" name="price" placeholder="Ex.25,00,000.000">
+                            </div>
+                        </div>
+
+
+                        <div class="form-row">
+                            <div class="name">Address</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <textarea class="textarea--style-6" name="address" placeholder="Address "></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Contact No</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    <input class="input--style-6" type="number" name="contact" placeholder="Enter 10 Digit Number" max="9999999999" min="7500000000">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="name">Email Id</div>
+                            <div class="value">
+                                <input class="input--style-6" type="email" name="email" placeholder="EMail">
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                    <button class="btn btn--radius-2 btn--blue-2" type="submit">Add Property</button>
+                </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Jquery JS-->
+    <script src="{% static 'userform/vendor/jquery/jquery.min.js' %}"></script>
+
+
+    <!-- Main JS-->
+    <script src="{% static 'userform/js/global.js' %}"></script>
+
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>
+<!-- end document-->

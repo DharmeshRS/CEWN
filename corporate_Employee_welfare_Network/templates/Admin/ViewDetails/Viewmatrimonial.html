@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    <body>
+        {% include 'adminhomepage.html' %}
+    <table style="background-color:#5a6778;color: white " border="1" align="center">
+  <thead>
+  <tr><th colspan="5" style="text-align: center"><h2 style="color: white">View Matrimonial Information</h2></th></tr>
+    <tr>
+      <th scope="col" width="200px">Username</th>
+      <th scope="col" width="200px">Gender</th>
+      <th scope="col" width="200px">Date Of Birth</th>
+      <th scope="col" width="300px">Description Of Matrimonial</th>
+        <th scope="col" width="200px">Contact No</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% if reg %}
+  {% for x in reg %}
+      <tr>
+      <td>{{ x.Username }}</td>
+      <td>{{ x.gender }}</td>
+      <td>{{ x.dob }}</td>
+      <td>{{ x.description }}</td>
+      <td>{{ x.contactno }}</td>
+    </tr>
+
+  {% endfor %}
+      {% else %}
+      <th style="text-align: center" colspan="5">NO Record Available</th>
+  {% endif %}
+
+  </tbody>
+</table>
+    </body>
+</html>
